@@ -1,0 +1,16 @@
+.apply-dourado-elegante {
+    color: var(--dourado-elegante);
+}
+
+.apply-branco {
+    color: var(--branco);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.btn-clicked {
+    transform: translateY(0.125rem);
+    box-shadow: 0rem 0.0625rem 0.125rem var(--areia-natural);
+}
