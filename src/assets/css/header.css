@@ -1,0 +1,136 @@
+header {
+    background-color: var(--verde-floresta);
+    height: 6.25rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0.625rem;
+    
+
+    #box-img-logo {
+        z-index: 1;
+    }
+
+    .container-icons-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-right: 1.25rem;
+        z-index: 1;
+        background-color: transparent;
+        
+        #icon-menu {
+            font-size: 1.5rem;
+            color: var(--dourado-elegante);
+            /* Prepara o ícone para receber animações */
+            transition: transform 0.4s ease, color 0.3s ease;
+            
+        }
+
+        /* Classe que o JS vai adicionar */
+        #icon-menu.icon-active {
+            transform: rotate(180deg); /* Gira o ícone ao trocar */
+            color: var(--dourado-elegante); /* Pode mudar a cor se quiser */
+        }
+
+    }
+
+
+
+    .nav-bar-h {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 6.25rem;
+        position: fixed;
+        height: 100vh;
+        width: 50%;
+        right: 0;
+        top: 0;
+        background-color: var(--verde-floresta);
+        z-index: 0;
+        transition: transform 0.5s ease-in-out;
+        transform: translateX(100%);
+
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            padding-right: 1.875rem;
+            height: 50%;
+
+
+            li > a {
+                font-size: 1.1rem;
+                font-family: var(--montserrat);
+                color: var(--dourado-elegante);
+                font-weight: 600;
+                position: relative; /* Necessário para posicionar a linha embaixo */
+                display: inline-block;
+                cursor: pointer;
+            }
+
+            li > a:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -0.3125rem; /* Distância do texto. Ajuste como preferir */
+                width: 100%;
+                height: 0.125rem; /* Espessura da linha */
+                background-color: var(--dourado-elegante); /* Cor da linha */
+                
+                /* O Segredo da animação: começa com largura 0 */
+                transform: scaleX(0);
+                transform-origin: left; /* Faz crescer a partir da esquerda */
+                transition: transform 0.3s ease-in-out;
+            }
+
+            li > a:hover::after {
+                transform: scaleX(1);
+            }
+        }
+
+        .btn-reserve {
+            width: 9.375rem;
+            align-self: center;
+            height: 3.125rem;
+            border-radius: 0.625rem;
+
+            background-color: var(--dourado-elegante);
+            color: var(--verde-floresta);
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+            
+        }
+
+        /* A classe que será adicionada via JS */
+        .btn-reserve.animando {
+            /* A animação dura 0.6s, começa e termina suave, e roda 1 vez */
+             animation: solidOutline 0.5s ease-in-out;
+        }
+    }
+
+    .nav-bar-h.show-sidebar {
+        transform: translateX(0%);
+    }
+}
+
+
+/* Keyframe pra animação */
+@keyframes solidOutline {
+    0% {
+        outline: 3px solid var(--dourado-elegante);
+        outline-offset: 0rem;
+    }
+    100% {
+        outline: 0.125rem solid transparent;
+        outline-offset: 0.9375rem; /* A linha se afasta do botão */
+    }
+}
