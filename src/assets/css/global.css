@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --cormorant-garamond: "Cormorant Garamond", serif;
+    --montserrat: "Montserrat", sans-serif;
+
+
+    --verde-floresta: #073B2B;
+    --dourado-elegante: #D4AF62;
+    --creme-suave: #F8F4EA;
+    --branco:#FFFFFF;
+    --areia-natural:#C9B08A;
+    --verde-profundo:#26352E;
+    --bege-claro:#E9E1D2;
+}
+
+html {
+    background-color: var(--verde-floresta);
+}
+
+body {
+    background-color: var(--creme-suave);
+    width: 100vw;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+    border: none;
+}
