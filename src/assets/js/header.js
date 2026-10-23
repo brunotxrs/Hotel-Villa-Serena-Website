@@ -25,6 +25,7 @@ function actionBtnMenu(){
         // Verifica se o ícone atual é o de "menu" (fa-bars)
         const isMenu = ele.iconMenu.classList.contains('fa-bars');
     
+
         // Adiciona a classe que gira o ícone no CSS
         ele.iconMenu.classList.add('icon-active');
     
@@ -32,19 +33,19 @@ function actionBtnMenu(){
         setTimeout(() => {
             if (isMenu) {
                 // Muda para o X
-                ele.iconMenu.classList.remove('fa-bars');
-                ele.iconMenu.classList.add('fa-xmark');
-                document.getElementById('nav-bar-header').classList.add('show-sidebar')
+                ele.iconMenu.classList.remove('fa-bars', 'apply-branco');
+                ele.iconMenu.classList.add('fa-xmark', 'apply-dourado-elegante');
+                document.getElementById('nav-bar-header').classList.add('show-sidebar');
            
             } else {
-           
+                
                 // Volta para o menu
-                ele.iconMenu.classList.remove('fa-xmark');
-                ele.iconMenu.classList.add('fa-bars');
+                ele.iconMenu.classList.remove('fa-xmark', 'apply-dourado-elegante');
+                ele.iconMenu.classList.add('fa-bars', 'apply-branco');
                 document.getElementById('nav-bar-header').classList.remove('show-sidebar')
            
             }
-            
+
             // Remove a classe de rotação para que ele fique reto de novo
             ele.iconMenu.classList.remove('icon-active');
         
@@ -53,8 +54,23 @@ function actionBtnMenu(){
     });
 }
 
+function headerFixed(){
+
+    const sticky = ele.headerWebsite.offsetTop;
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > sticky) {
+            ele.headerWebsite.classList.add("sticky");
+        } else {
+            ele.headerWebsite.classList.remove("sticky");
+        }
+    });
+
+
+}
 
 export function actionsHeader(){
+    headerFixed();
     actionBtnMenu();
     actionBtnReserva();
 }
