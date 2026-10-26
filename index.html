@@ -17,13 +17,13 @@
             <a href="./index.html" id="box-img-logo" class="h-100 user-select-none">
                <picture>
                         <!-- Imagem para telas grandes (desktop) -->
-                        <source media="(min-width: 1024px)" srcset="./src/assets/imgs/logo.png">
+                        <source class="img-fluid" media="(min-width: 1024px)" srcset="./src/assets/imgs/logo.png">
                         
                         <!-- Imagem para telas médias (tablets) -->
-                        <source media="(min-width: 768px)" srcset="./src/assets/imgs/logo-tablet.png">
+                        <source class="img-fluid" media="(min-width: 768px)" srcset="./src/assets/imgs/logo-tablet.png">
                         
                         <!-- Imagem padrão para telas pequenas (celulares) -->
-                        <img src="./src/assets/imgs/logo.png" alt="Logo Hotel Villa Serena" class="h-100 user-select-none">
+                        <img  src="./src/assets/imgs/logo.png" alt="Logo Hotel Villa Serena" class="img-fluid h-100 user-select-none">
                 </picture>
             
             </a>
@@ -34,22 +34,23 @@
             
             <nav id="nav-bar-header" class="nav-bar-h user-select-none">
                 <ul>
-                    <li><a href="#inicio">início</a></li>
-                    <li><a href="#quartos">Quartos</a></li>
-                    <li><a href="#experiencias">Experiências</a></li>
-                    <li><a href="#galeria">Galeria</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li class="nav-btn"><a href="#inicio">início</a></li>
+                    <li class="nav-btn"><a href="#quartos">Quartos</a></li>
+                    <li class="nav-btn"><a href="#experiencias">Experiências</a></li>
+                    <li class="nav-btn"><a href="#galeria">Galeria</a></li>
+                    <li class="nav-btn"><a href="#contato">Contato</a></li>
                 </ul>
-               <button id="btn-reserve-header" class="btn-reserve">Reserve Agora</button>
+               <button id="btn-reserve-header" class="btn-reserve">Reserve Agora
+               </button>
             </nav>
         </section> 
     </header>
 
 
-    <main>
+    <main class="container-fluid">
         <section id="inicio" class="container-conteudo">
             <div class="box-conteudo">
-                <p><span class="trass"></span> Bem vindo ao</p>
+                <p class="sub-titles"><span class="trassado"></span> Bem vindo ao</p>
                 <h1>Hotel Villa Serena</h1>
                 <p>Seu refúgio de bem-estar à beira-mar.</p>
                 <p>Hospede-se nos nossos hotéis com quartos a partir de R$ 100,00</p>
@@ -59,10 +60,10 @@
                 </button>
             </div>
             <div class="box-img-desktop">
-                <img class="slide" src="./src/assets/imgs/img_1.png" alt="">
-                <img class="slide" src="./src/assets/imgs/img_2.png" alt="">
-                <img class="slide" src="./src/assets/imgs/img_3.png" alt="">
-                <img class="slide" src="./src/assets/imgs/img_4.png" alt="">
+                <img class="slide img-fluid" src="./src/assets/imgs/img_1.png" alt="">
+                <img class="slide img-fluid" src="./src/assets/imgs/img_2.png" alt="">
+                <img class="slide img-fluid" src="./src/assets/imgs/img_3.png" alt="">
+                <img class="slide img-fluid" src="./src/assets/imgs/img_4.png" alt="">
             </div>
         </section>
 
@@ -131,10 +132,48 @@
                 </span>
             </div>
         </section>
-
-
     </main>
 
+    <footer>
+        <section class="container-footer">
+            
+            <section class="container-footer-info" id="contato">
+                <p class="sub-titles"><span class="trassado"></span> Faça sua reserva</p>
+                <h3>Entre em contato conosco informando as datas desejadas.</h3>
+                <p>Lhe retornaremos informando disponibilidade e repassando detalhes da reserva.</p>
+            </section>
+
+            <section class="container-form">
+                <form action="" method="post" class="form-website row" id="reserva"  autocomplete="off">
+                    <label for="name" class="col-12 col-md-6 outline-active">
+                        <input type="text" name="nome" id="name" placeholder="Nome" required autocomplete="off">
+                    </label>
+                    <label for="email" class="col-12 col-md-6 outline-active">
+                        <input type="email" name="email" id="email" placeholder="E-mail" required autocomplete="off">
+                    </label>
+                    <label for="data-entrada" class="col-12 col-md-6 outline-active">
+                        <input type="text" name="data_entrada" id="data-entrada" placeholder="Data de Entrada" required autocomplete="off">
+                    </label>
+                    <label for="data-saida" class="col-12 col-md-6 outline-active">
+                        <input type="text" name="data_saída" id="data-saida" placeholder="Data de Saída" required autocomplete="off">
+                    </label>
+                    <label for="observacaos" class="col-12 col-md-6 outline-active">
+                        <textarea name="observações" id="observacaos" rows="5" placeholder="Observações"></textarea>
+                    </label>
+                    <label for="adultos" class="col-12 col-md-6 outline-active">
+                        <input type="text" name="adultos" id="adultos" placeholder="Adultos" required autocomplete="off">
+                    </label>
+                    <label for="criancas" class="col-12 col-md-6 outline-active">
+                        <input type="text" name="crianças" id="criancas" placeholder="Crianças" required autocomplete="off">
+                    </label>
+                    <button type="submit" class="btn-form">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Enviar</span>
+                    </button>
+                </form>
+            </section>
+        </section>
+    </footer>
 
     <button id="btn-top" class="hidden">
         <i class="fa-solid fa-circle-up"></i>
