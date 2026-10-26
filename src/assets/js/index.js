@@ -1,3 +1,3 @@
-import{ initWebsite } from '../js/intiWebSite.js'
+import{ initWebsite } from './initWebSite.js'
 
 document.addEventListener('DOMContentLoaded', initWebsite)
