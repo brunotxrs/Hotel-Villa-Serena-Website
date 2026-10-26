@@ -1,5 +1,7 @@
 import { elementsInDom, btnTop } from './elementsDOM.js';
-import { actionsHeader } from '../js/header.js'
+import { actionsHeader } from './header.js'
+import { actionsMain } from './main.js';
+import { actionsFooter } from './footer.js'
 
 
 function utilScrollToTop() {
@@ -26,9 +28,21 @@ function utilScrollToTop() {
     verificarRolagem();
 }
 
+
 export function initWebsite(){
+
+    // valida se os elementos esta criados no DOM
     elementsInDom();
 
+    //acoes de manipulação dos elementos do header
     actionsHeader();
+
+    //acoes de manipulação dos elementos do main
+    actionsMain();
+
+    //acoes de manipulação dos elementos do footer
+    actionsFooter();
+
+    // função do botao topo
     utilScrollToTop();
 }
