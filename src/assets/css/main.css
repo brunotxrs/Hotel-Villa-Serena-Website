@@ -1,0 +1,607 @@
+main {
+    background-color: var(--creme-suave);
+    position: relative;
+    z-index: 1;
+    top: 6.25rem;
+    
+    .container-conteudo {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 31.25rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: trocarFundo 12s infinite ease-in-out;
+        user-select: none;
+        transition: background-image 1s ease-in-out;
+        margin-bottom: 20px;
+
+        
+        .box-conteudo {
+            background: linear-gradient(to right,  #F8F4EA 35%, transparent);
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 10%;
+            gap: 0.625rem;
+
+              p:first-of-type {
+                font-size: 1.1rem;
+                font-family: var(--montserrat);
+                color: var(--dourado-elegante);
+                font-weight: 600;
+                letter-spacing: 0.1875rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 0.625rem;
+
+                .trass {
+                    display: inline-block;
+                    width: 1.875rem;    
+                    height: 0.125rem;             
+                    background-color: var(--dourado-elegante);
+                    margin: 1.25rem 0;  
+                }
+            }
+
+            h1 {
+                font-family: var(--cormorant-garamond);
+                font-size: 4rem;
+                width: 18.75rem;
+                font-weight: 700;
+                line-height: 90%;
+                color: var(--verde-floresta);
+                text-shadow: 0.0625rem 0.0625rem 0.0625rem var(--verde-floresta);
+            }
+
+            p:nth-child(3) {
+                font-size: 1.6rem;
+                font-weight: bold;
+                font-family: var(--cormorant-garamond);
+                width:16.25rem;
+                max-width: 16.25rem;
+                line-height: 100%;
+                color: var(--verde-floresta);
+            }
+
+            p:nth-child(4){
+                color: var(--verde-floresta);
+                font-size: 1rem;
+                font-family: var(--montserrat);
+                width: 18.75rem;
+                font-weight: 500;
+            }
+
+            .btn-conteudo {
+                height: 3.125rem;
+                width: 12.5rem;
+                border-radius: 1.5625rem;
+                background-color: var(--dourado-elegante);
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: center;
+                gap: 1.25rem;
+                font-size: 1.2rem;
+                color: var(--verde-floresta);
+                font-weight: 500;
+                font-family: var(--montserrat);
+                box-shadow: 0 0.125rem 0.25rem var(--verde-floresta);
+            }
+
+            .btn-conteudo:active {
+                transform: translateY(0.125rem);
+                box-shadow: unset;
+            }
+
+        }
+
+
+
+        .box-img-desktop {
+            display: none;
+        }
+
+    }
+
+    .section-question {
+        display: flex;
+        flex-direction: column;
+        padding: 1.25rem 0.625rem;
+        width: 100%;
+        max-width: 75rem;
+        user-select: none;
+        margin: auto;
+
+        align-items: center;
+
+        h2 {
+            text-align: center;
+            font-size: 1.3rem;
+            font-family: var(--montserrat);
+            color: var(--dourado-elegante);
+            font-weight: 600;
+            text-shadow: 0 0 0.0625rem var(--areia-natural);
+            letter-spacing: 0.1875rem;
+            text-transform: uppercase;
+            margin-bottom: 2.5rem;
+            width: 100%;
+            text-align: center;
+            line-height: 145%;
+        }
+
+        .box-sect-question {
+            display: grid;
+            grid-template-columns: 1fr 1.25rem 1fr; 
+            width: 100%;
+            max-width: 75rem;
+            color: var(--verde-floresta);
+            
+
+            .divisa {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                span {
+                    height: 6.25rem;
+                    background: var(--dourado-elegante);
+                    width: 0.0625rem;
+                    padding: 0.0625rem;
+                    margin: 0 0.3125rem;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            div:nth-child(1), div:nth-child(3) {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                width: 100%;
+                gap: 0.3125rem;
+                padding: 0 0.3125rem;
+                justify-content: center;
+
+                i {
+                    font-size: 2rem;
+                }
+
+                span {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 0.3125rem;
+
+                    h3 {
+                        font-size: 1.1rem;
+                        font-weight: 500;
+                        height: 3.125rem;
+                        margin: 0;
+                        font-family: var(--cormorant-garamond);
+                    }
+
+                    p {
+                        margin: 0;
+                        font-size: 0.8rem;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+
+    .section-rooms {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1.25rem;
+        user-select: none;
+
+
+        .box-title-rooms {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-around;
+            padding:  0 1.3125rem;
+            text-align: center;
+            gap: 0.3125rem;
+
+            h2 {
+                font-size: 1.3rem;
+                font-family: var(--montserrat);
+                color: var(--dourado-elegante);
+                font-weight: 600;
+                text-shadow: 0 0 0.0625rem var(--areia-natural);
+                letter-spacing: 0.1875rem;
+                text-transform: uppercase;
+                width: 100%;
+                text-align: center;
+            }
+
+            .divisa {
+                display: inline-block;
+                width: 4.5rem;
+                height: 0.125rem;
+                background-color: var(--dourado-elegante);
+                margin: 1.25rem 0;
+            }
+        }
+
+        .box-imgs-rooms {
+            width: 100%;
+            padding: 0 0.625rem;            
+            display: flex;
+            flex-direction: column;
+            gap: 0.625rem;
+            margin-bottom: 2.5rem;
+            align-items: center;
+
+        
+            span:nth-child(1), span:nth-child(2), span:nth-child(3){
+                position: relative;
+                width: 90%;
+                height: 21.875rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding: 0 0.3125rem;
+                border-radius: 0.3125rem;
+                background-color: var(--dourado-elegante);
+                overflow: hidden;
+                margin-bottom: 1.25rem;
+                transition: transform 0.3s ease;
+
+                .img-mob {
+                    width: 100%;
+                    height: 96%;
+                 
+                    background-size: cover;
+                    background-position: top center;
+                    background-repeat: no-repeat;
+                    border-radius: 0.3125rem;
+                }
+
+                .info-rooms {
+                    padding: 5px;
+                    position: absolute;
+                    top: 0;
+                    left: 0px;
+                    width: 100%;
+                    height: 7.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    border-radius: 0.3125rem;
+                    background-color: var(--dourado-elegante);
+                    color: var(--verde-floresta);
+
+
+
+                    h3 {
+                        font-size: 1.1rem;
+                        font-family: var(--montserrat);
+                        width: 100%;
+                        font-weight: 600;
+                        margin: 0;
+                        height: 1.875rem;
+                        border-bottom: 0.0625rem solid var(--verde-floresta);
+                        
+                    }
+
+                    p {
+
+                        margin: 0;
+                        font-family: var(--montserrat);
+                        font-weight: 400;
+                        font-size: 0.9rem;
+                        text-align: center;
+                    } 
+                }
+
+                .more {
+                    height: 2.5rem;
+                    width: 9.375rem;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    color: var(--verde-floresta);
+                    border-radius: 0.3125rem;
+                    align-self: flex-end;
+                    position: absolute;
+                    bottom: 0.3125rem;
+                    right: 0.625rem;
+                    visibility: hidden;
+                    background-color: var(--dourado-elegante);
+                    cursor: pointer;
+
+                    transition: background-color 2.5s ease, transform 2.5s ease;
+                    
+                }
+
+
+            }
+
+            span:nth-child(1) {
+                .img-mob {
+                    background-image: url(../imgs/suite-solteiro.png);
+                }
+            }
+
+            span:nth-child(2) {
+                .img-mob {
+                    background-image: url(../imgs/suite-casal.png);
+                }
+            }
+
+            span:nth-child(3) {
+                .img-mob {
+                    background-image: url(../imgs/suite-master.png);
+                }
+            }
+
+            span:nth-child(1):hover, 
+            span:nth-child(2):hover, 
+            span:nth-child(3):hover {
+                transform: translateY(-0.625rem);
+
+                .more {
+                    visibility: visible;
+                    transform: scale(0.9); 
+                }
+
+            }
+
+            
+        }
+
+
+
+    } 
+}
+
+@media (48rem <= width <= 63.9375rem){
+    main {
+        overflow: hidden;
+        background-color: var(--bege-claro);
+    }
+    main .container-conteudo{
+        animation: none;
+    }
+
+    main .container-conteudo .box-conteudo {
+        background: var(--bege-claro);
+    }
+
+    main .container-conteudo .box-img-desktop {
+        display: flex;
+        position: relative;
+        background-color: var(--bege-claro);
+        padding: 0 0.625rem;
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: var(--bege-claro);
+        }
+    }
+
+    main .box-sect-question {
+        margin: auto;
+    }
+
+    main .section-question h2 {
+        font-size: 1.4rem;        
+    }
+
+    main .section-question .box-sect-question div:nth-child(1), main .section-question .box-sect-question div:nth-child(3)  {
+        gap: 40px;
+
+        i {
+
+            font-size: 3rem;
+        }
+
+        span {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            h3 {
+                font-size: 1.4rem;
+            }
+            
+            p {
+                font-size: 1.2rem;
+            }
+
+        }
+    }
+
+
+    main {
+        & .section-rooms {
+            & .box-imgs-rooms {
+                & span:nth-child(1), span:nth-child(2) , span:nth-child(3){
+                    background-color: var(--verde-floresta);
+                    .img-mob {
+                        background-size: auto;
+                        background-position: center -200px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    main {
+        & .section-rooms {
+            & .box-imgs-rooms {
+                & span:nth-child(1), & span:nth-child(2), & span:nth-child(3) {
+                    .info-rooms {
+                        background-color: var(--verde-floresta);
+                        color: var(--dourado-elegante);
+
+                        h3 {
+                            border-bottom: 1px solid var(--dourado-elegante);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (width >= 63.9375rem){
+    main {
+        overflow: hidden;
+        background-color: var(--bege-claro);
+        
+    }
+    main .container-conteudo{
+        animation: none;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 75rem;
+        margin: auto;
+    }
+
+    main .container-conteudo .box-conteudo {
+        background: var(--bege-claro);
+        padding: inherit;
+
+        h1 {
+            width: 500px;
+        }
+    }
+
+    main .container-conteudo .box-img-desktop {
+        display: flex;
+        position: relative;
+        background-color: var(--bege-claro);
+        padding: 1.875rem 0.625rem;
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: var(--bege-claro);
+            border-radius: 0.125rem;
+        }
+    }
+
+    main .section-question h2 {
+        font-size: 1.5rem;
+        width: 100%;  
+        text-align: center;  
+        margin-bottom: 1.9375rem;
+    }
+
+    main .section-question .box-sect-question div:nth-child(1), main .section-question .box-sect-question div:nth-child(3)  {
+        gap: 40px;
+
+        i {
+            font-size: 3rem;
+        }
+
+        span {
+
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+
+            h3 {
+                font-size: 1.6rem;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+
+        }
+    }
+
+    main {
+        & .section-rooms {
+            max-width: 1200px;
+            margin: auto;
+        }
+    }
+
+
+    main {
+        & .section-rooms {
+            & .box-imgs-rooms {
+
+                justify-content: space-evenly;
+
+                & span:nth-child(1), span:nth-child(2), span:nth-child(3) {
+                    width: 300px;
+                    height: 420px;
+
+                    .img-mob {
+                        background-size: cover;
+                        background-position: center 100px;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+
+    main {
+        & .section-rooms {
+            & .box-title-rooms {
+                .divisa {
+                    width: 40.5rem;
+                }
+            }
+        }
+    }
+
+    main {
+        & .section-rooms {
+            .box-imgs-rooms {
+                width: 100%;
+                padding: 0 0.625rem;
+                display: flex;
+                flex-direction: row;
+                gap: 0.625rem;
+                margin-bottom: 2.5rem;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@keyframes trocarFundo {
+  0%, 100% {
+    background-image: url('../imgs/img_1.png');
+    opacity: 1;
+  }
+  25% {
+    background-image: url('../imgs/img_2.png');
+  }
+  50% {
+    background-image: url('../imgs/img_3.png');
+  }
+  75% {
+    background-image: url('../imgs/img_4.png');
+  }
+}
