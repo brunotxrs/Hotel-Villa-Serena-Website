@@ -6,6 +6,28 @@
     animation: fadeInDown 0.4s ease-out forwards;
 }
 
+.sub-titles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.625rem;
+    color: var(--dourado-elegante);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1875rem;
+    font-family: var(--montserrat);
+    text-shadow: 0 0 0.0187rem var(--verde-profundo);
+}
+
+.trassado {
+    display: inline-block;
+    width: 1.875rem;    
+    height: 0.125rem;             
+    background-color: var(--dourado-elegante);
+    margin: 1.25rem 0;  
+}
+
 .apply-dourado-elegante {
     color: var(--dourado-elegante);
 }
@@ -31,6 +53,10 @@
 .animando-buttons {
     /* A animação dura 0.6s, começa e termina suave, e roda 1 vez */
     animation: solidBtnOutline 0.5s ease-in-out;
+}
+
+.outline-active:hover {
+    outline: 1px solid var(--dourado-elegante) !important;
 }
 
 
