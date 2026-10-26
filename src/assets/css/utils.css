@@ -25,7 +25,30 @@
 
 .animando-btn-top {
     /* A animação dura 0.6s, começa e termina suave, e roda 1 vez */
-        animation: solidLine 0.5s ease-in-out;
+    animation: solidLine 0.5s ease-in-out;
+}
+
+.animando-buttons {
+    /* A animação dura 0.6s, começa e termina suave, e roda 1 vez */
+    animation: solidBtnOutline 0.5s ease-in-out;
+}
+
+
+
+/* Keyframe pra animação */
+@keyframes solidBtnOutline {
+    0% {
+        outline: 0.1875rem solid var(--dourado-elegante);
+        outline-offset: 0px;
+    }
+    100% {
+        outline: 0.125rem solid transparent;
+        outline-offset: 0.9375rem; /* A linha se afasta do botão */
+    }
+}
+
+.banner-active {
+    display: flex;
 }
 
 
