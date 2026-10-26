@@ -26,6 +26,7 @@ html {
 body {
     background-color: var(--creme-suave);
     width: 100vw;
+    overflow-x: hidden;
 }
 
 #btn-top {
@@ -44,6 +45,7 @@ body {
     bottom: 1.25rem;
     transition: transform 0.2s ease, background-color 0.3s ease;
     box-shadow: 0 0 0.3125rem var(--verde-profundo);
+    z-index: 9999;
 }
 
 ul {
