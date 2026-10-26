@@ -379,6 +379,7 @@ main {
         position: relative;
         background-color: var(--bege-claro);
         padding: 0 0.625rem;
+        overflow: hidden;
 
         .slide {
             width: 100%;
@@ -484,6 +485,7 @@ main {
         position: relative;
         background-color: var(--bege-claro);
         padding: 1.875rem 0.625rem;
+        overflow: hidden;
 
         .slide {
             width: 100%;
