@@ -4,6 +4,9 @@
 #header {
     width: 100%;
     background-color: var(--verde-floresta);
+    position: fixed; /* Obrigatório para o z-index funcionar */
+    z-index: 9999;      /* Joga o header para a camada lá no topo */
+    width: 100%;
     
     section {
             height: 6.25rem;
@@ -13,6 +16,7 @@
             justify-content: space-between;
             padding: 0.625rem;
             transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+            
 
         #box-img-logo {
             z-index: 1;
