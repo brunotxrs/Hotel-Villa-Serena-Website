@@ -260,7 +260,7 @@ main {
                 background-color: var(--dourado-elegante);
                 overflow: hidden;
                 margin-bottom: 1.25rem;
-                transition: transform 0.3s ease;
+                transition: transform 0.9s ease;
 
                 .img-mob {
                     width: 100%;
@@ -287,6 +287,7 @@ main {
                     border-radius: 0.3125rem;
                     background-color: var(--dourado-elegante);
                     color: var(--verde-floresta);
+                    box-shadow: none;
 
 
 
@@ -327,8 +328,10 @@ main {
                     visibility: hidden;
                     background-color: var(--dourado-elegante);
                     cursor: pointer;
+                    box-shadow: 0 0.125rem 0.25rem var(--verde-floresta);
 
                     transition: background-color 2.5s ease, transform 2.5s ease;
+                    transform: scale(0.3);
                     
                 }
 
@@ -357,18 +360,22 @@ main {
             span:nth-child(2):hover, 
             span:nth-child(3):hover {
                 transform: translateY(-0.625rem);
+                box-shadow: 0 0.125rem 0.25rem var(--verde-floresta);
+
+                .info-rooms {
+                    box-shadow: none;
+                }
 
                 .more {
                     visibility: visible;
                     transform: scale(0.9); 
                 }
 
+
+
             }
-
-            
+   
         }
-
-
 
     } 
 }
